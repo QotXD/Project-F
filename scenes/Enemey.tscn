@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://vbwcnwe3ngrs"]
+
+[ext_resource type="Script" uid="uid://b0hh7y7a8l3h0" path="res://scripts/enemey.gd" id="1_gwinc"]
+[ext_resource type="Texture2D" uid="uid://bl00ss106311d" path="res://sprites/icon.svg" id="1_uoaud"]
+[ext_resource type="PackedScene" uid="uid://rgtqhb07g62u" path="res://scenes/killzone.tscn" id="2_gwinc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sr33e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uoaud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2hof"]
+size = Vector2(89.210526, 87.52632)
+
+[node name="Enemey" type="CharacterBody2D"]
+script = ExtResource("1_gwinc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.296875, 0.296875)
+sprite_frames = SubResource("SpriteFrames_sr33e")
+
+[node name="Killzone" parent="." instance=ExtResource("2_gwinc")]
+scale = Vector2(0.296875, 0.296875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 13.473684)
+shape = SubResource("RectangleShape2D_w2hof")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+rotation = -1.5707964
+target_position = Vector2(-1.0927847e-06, 25)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+rotation = 1.5707964
+target_position = Vector2(1.0927847e-06, 25)

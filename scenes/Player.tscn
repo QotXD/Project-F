@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dawcct66di5w3"]
+
+[ext_resource type="Script" uid="uid://bd3k1vjmws8qn" path="res://scripts/player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://jqinql2vils7" path="res://sprites/cat.png" id="2_3li8b"]
+[ext_resource type="PackedScene" uid="uid://67hhcfpb6svs" path="res://scenes/chainsaw.tscn" id="3_3li8b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kne1u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3li8b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3li8b")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3li8b")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e80uo"]
+radius = 2.022756
+height = 7.079646
+
+[node name="Player" type="CharacterBody2D" unique_id=384229067]
+collision_layer = 2
+script = ExtResource("1_kpjcp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=643252497]
+position = Vector2(1.1444092e-05, 0)
+scale = Vector2(0.06922148, 0.06514963)
+sprite_frames = SubResource("SpriteFrames_kne1u")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1052239935]
+z_index = 5
+scale = Vector2(3.955, 3.955)
+shape = SubResource("CapsuleShape2D_e80uo")
+
+[node name="Chainsaw" parent="." unique_id=993216508 instance=ExtResource("3_3li8b")]
+position = Vector2(21.000002, 1)
+scale = Vector2(0.35221225, 0.34938526)

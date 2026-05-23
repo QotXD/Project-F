@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://67hhcfpb6svs"]
+
+[ext_resource type="Texture2D" uid="uid://dqahmtr0ejg12" path="res://sprites/chainsaw.png" id="1_48p1g"]
+[ext_resource type="Script" uid="uid://dkxd4grfoj4fj" path="res://scenes/chainsaw.gd" id="2_pta63"]
+[ext_resource type="Script" uid="uid://by5s277blrlh7" path="res://scenes/chainsaw_hitbox.gd" id="3_3bvso"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pta63"]
+radius = 7.8080015
+height = 50.66667
+
+[node name="Chainsaw" type="Sprite2D"]
+scale = Vector2(0.5131579, 0.51229507)
+texture = ExtResource("1_48p1g")
+script = ExtResource("2_pta63")
+
+[node name="chainsaw Hitbox" type="Area2D" parent="."]
+script = ExtResource("3_3bvso")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chainsaw Hitbox"]
+position = Vector2(35.07692, 1.9520001)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_pta63")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bir85xy0padvv"]
+
+[ext_resource type="AudioStream" uid="uid://tr8i7brxxv1c" path="res://music/coral-chorus.mp3" id="1_05ggv"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_05ggv")
+volume_db = -20.991
+autoplay = true
+bus = &"Music"
