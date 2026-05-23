@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://vbwcnwe3ngrs"]
+[gd_scene format=3 uid="uid://vbwcnwe3ngrs"]
 
 [ext_resource type="Script" uid="uid://b0hh7y7a8l3h0" path="res://scripts/enemey.gd" id="1_gwinc"]
 [ext_resource type="Texture2D" uid="uid://bl00ss106311d" path="res://sprites/icon.svg" id="1_uoaud"]
@@ -18,24 +18,31 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2hof"]
 size = Vector2(89.210526, 87.52632)
 
-[node name="Enemey" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xritl"]
+size = Vector2(24, 22)
+
+[node name="Enemey" type="CharacterBody2D" unique_id=318576784]
 script = ExtResource("1_gwinc")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=37611057]
 scale = Vector2(0.296875, 0.296875)
 sprite_frames = SubResource("SpriteFrames_sr33e")
 
-[node name="Killzone" parent="." instance=ExtResource("2_gwinc")]
+[node name="EnemeyHitbox" parent="." unique_id=258221197 instance=ExtResource("2_gwinc")]
 scale = Vector2(0.296875, 0.296875)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemeyHitbox" unique_id=1426885332]
 position = Vector2(0, 13.473684)
 shape = SubResource("RectangleShape2D_w2hof")
 
-[node name="RayCastRight" type="RayCast2D" parent="."]
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=846646217]
 rotation = -1.5707964
 target_position = Vector2(-1.0927847e-06, 25)
 
-[node name="RayCastLeft" type="RayCast2D" parent="."]
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1699833302]
 rotation = 1.5707964
 target_position = Vector2(1.0927847e-06, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104679076]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_xritl")

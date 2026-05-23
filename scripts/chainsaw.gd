@@ -9,3 +9,7 @@ func _process(_delta):
 	var direction = (mouse_pos - player.global_position).normalized()
 	global_position = player.global_position + (direction * orbit_radius)
 	look_at(mouse_pos)
+
+
+func _on_chainsaw_hitbox_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

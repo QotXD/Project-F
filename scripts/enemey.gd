@@ -17,8 +17,10 @@ func take_damage(amount: float, source_position: Vector2) -> void:
 		die()
 
 func die() -> void:
+	print("ENEMEY DIE")
 	queue_free()
 
+#Goomba movement
 func _process(delta: float) -> void:
 	if ray_cast_right.is_colliding():
 		direction = -1
@@ -27,4 +29,4 @@ func _process(delta: float) -> void:
 		direction = 1
 		animated_sprite_2d.flip_h = false
 	
-	# position.x += direction * SPEED * delta
+	position.x += direction * SPEED * delta
