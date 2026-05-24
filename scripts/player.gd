@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@export var max_health := 3.0
+var health := max_health
+
 const MAX_SPEED = 350.0
 const ACCELERATION = 2000.0
 const DECELERATION = 2500.0
@@ -17,6 +20,21 @@ func _physics_process(delta: float) -> void:
 	handle_horizontal_movement(delta)
 	update_animation()
 	move_and_slide()
+
+#DEATH
+
+
+func take_damage(amount: float, source_position: Vector2) -> void:
+	health -= amount
+	if health <= 0:
+		die()
+
+func die() -> void:
+	Engine.time_scale = 0.5
+	%GameOver.show()
+	await get_tree().create_timer(2.0, false, false, true).timeout
+	Engine.time_scale = 1.0
+	get_tree().reload_current_scene()
 
 #GRAVITY
 func apply_gravity(delta: float) -> void:

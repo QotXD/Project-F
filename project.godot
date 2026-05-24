@@ -26,6 +26,7 @@ buses/default_bus_layout=""
 [autoload]
 
 Music="*res://scenes/music.tscn"
+Global="*uid://btvsumsg3atcs"
 
 [input]
 
