@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b0hh7y7a8l3h0" path="res://scripts/enemey.gd" id="1_gwinc"]
 [ext_resource type="Texture2D" uid="uid://bl00ss106311d" path="res://sprites/icon.svg" id="1_uoaud"]
 [ext_resource type="PackedScene" uid="uid://rgtqhb07g62u" path="res://scenes/killzone.tscn" id="2_gwinc"]
-[ext_resource type="Script" uid="uid://dgky4tg4ct4xm" path="res://scenes/EnemyHitbox.gd" id="4_10oi6"]
+[ext_resource type="Script" uid="uid://dgky4tg4ct4xm" path="res://scripts/EnemyHitbox.gd" id="4_10oi6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sr33e"]
 animations = [{

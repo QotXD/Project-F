@@ -1,10 +1,11 @@
 extends Node
 
-var score = 0
+@onready var coin_label: Label = $"../UI/CoinUI/CoinScore"
+@onready var star_label: Label = $"../UI/StarUI/StarScore"
 
-@onready var score_label: Label = $ScoreLabel
-
-func add_point():
-	score += 1
-	score_label.text = "Score: " + str(score)
+func _ready():
+	update_ui()
 	
+func update_ui():
+	coin_label.text = str(Global.coins)
+	star_label.text = str(Global.get_star_count())

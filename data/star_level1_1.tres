@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="StarData" format=3 uid="uid://cq83ex34k8lr"]
+
+[ext_resource type="Script" uid="uid://021qorablnq2" path="res://scripts/StarData.gd" id="1_ownl4"]
+
+[resource]
+script = ExtResource("1_ownl4")
+metadata/_custom_type_script = "uid://021qorablnq2"
