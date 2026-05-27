@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://de0svc4fk2rjp"]
 
-[ext_resource type="Texture2D" uid="uid://bl00ss106311d" path="res://sprites/icon.svg" id="1_iehr2"]
+[ext_resource type="Texture2D" uid="uid://bgn7cqrgb7a4d" path="res://sprites/star.png" id="1_iehr2"]
 
 [node name="StarUI" type="Control" unique_id=2108536649]
 layout_mode = 3

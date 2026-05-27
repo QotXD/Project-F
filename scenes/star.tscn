@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dt1vu45icv2x0" path="res://scripts/star.gd" id="1_mcqwg"]
 [ext_resource type="Script" uid="uid://021qorablnq2" path="res://scripts/StarData.gd" id="2_j6vao"]
-[ext_resource type="Texture2D" uid="uid://bl00ss106311d" path="res://sprites/icon.svg" id="3_ef0hr"]
+[ext_resource type="Texture2D" uid="uid://bgn7cqrgb7a4d" path="res://sprites/star.png" id="3_ef0hr"]
 
 [sub_resource type="Resource" id="Resource_ef0hr"]
 script = ExtResource("2_j6vao")
@@ -17,7 +17,8 @@ script = ExtResource("1_mcqwg")
 data = SubResource("Resource_ef0hr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1746928981]
-scale = Vector2(0.305, 0.305)
+position = Vector2(1.0000002, -1)
+scale = Vector2(0.11471155, 0.11471155)
 texture = ExtResource("3_ef0hr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=945487242]
